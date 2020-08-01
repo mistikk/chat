@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "21613488337",
+    "firebase_url": "https://chatchallange.firebaseio.com",
+    "project_id": "chatchallange",
+    "storage_bucket": "chatchallange.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:21613488337:android:01371451bf991d5c027df0",
+        "android_client_info": {
+          "package_name": "com.chatchallange"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "21613488337-s46mafpomaj3b97g0vj6cahe9u8a2mf8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAau0f2hPgN0JnBUpYjVX7BRHPik0z-DPE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21613488337-s46mafpomaj3b97g0vj6cahe9u8a2mf8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "21613488337-r6m64b1l6pbflqo7e853fce41nd2gdhg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mistik.chat"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>21613488337-r6m64b1l6pbflqo7e853fce41nd2gdhg.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.21613488337-r6m64b1l6pbflqo7e853fce41nd2gdhg</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCZgsSgWsTa6zHwbESx-XboNmBR6rHdlEg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>21613488337</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mistik.chat</string>
+	<key>PROJECT_ID</key>
+	<string>chatchallange</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatchallange.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:21613488337:ios:36c48b2c3f2902b9027df0</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatchallange.firebaseio.com</string>
+</dict>
+</plist>

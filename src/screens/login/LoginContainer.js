@@ -1,4 +1,6 @@
 import {StackActions, useNavigation} from '@react-navigation/native';
+import firestore from '@react-native-firebase/firestore';
+
 import * as ROUTES from '../../constants/routes';
 
 const LoginContainer = ({children}) => {
