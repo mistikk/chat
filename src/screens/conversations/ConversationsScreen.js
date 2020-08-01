@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
+import Avatar from '../../components/Avatar';
+
 import ConversationsContainer from './ConversationsContainer';
 
 const ConversationsScreen = () => {
@@ -16,9 +18,7 @@ const ConversationsScreen = () => {
       <TouchableOpacity
         onPress={handleListItemPress}
         style={styles.listItemWrapper}>
-        <View style={styles.avatar}>
-          <Text style={styles.avatarText}>{item.substring(0, 2)}</Text>
-        </View>
+        <Avatar username={item} width={60} height={60} />
         <Text style={styles.usernameText}>{item}</Text>
       </TouchableOpacity>
     );
@@ -58,20 +58,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
-  },
-  avatar: {
-    borderWidth: 1,
-    borderRadius: 30,
-    borderColor: '#F52958',
-    width: 60,
-    height: 60,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  avatarText: {
-    textTransform: 'uppercase',
-    fontSize: 17,
-    fontWeight: '600',
   },
   usernameText: {
     fontSize: 17,
