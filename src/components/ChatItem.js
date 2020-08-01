@@ -3,15 +3,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native';
 
 import Avatar from './Avatar';
 
-const ChatItemView = ({
-  message,
-  senderId,
-  userId,
-  avatar,
-  connectWithTop,
-  isCurrentUser,
-}) => {
-  console.log('message', message);
+const ChatItemView = ({message, connectWithTop, isCurrentUser, username}) => {
   const _getGroomedStylesForMessage = () => {
     const result = [];
 
@@ -39,7 +31,7 @@ const ChatItemView = ({
   return (
     <View style={[styles.item, isCurrentUser && styles.currentUser]}>
       {!isCurrentUser && !connectWithTop && (
-        <Avatar username="mustafa" width={40} height={40} />
+        <Avatar username={username} width={40} height={40} />
       )}
       <View style={!isCurrentUser ? styles.itemBody : styles.selfItem}>
         <View style={[styles.itemText, _getGroomedStylesForMessage()]}>

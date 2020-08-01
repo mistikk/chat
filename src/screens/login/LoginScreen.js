@@ -14,13 +14,21 @@ const LoginScreen = () => {
       {({handleLoginButton}) => (
         <SafeAreaView style={styles.safeArea}>
           <View style={styles.container}>
-            <Text style={styles.title}>Welcome to</Text>
-            <Text style={styles.title2}>Abc Chat</Text>
-            <TextInput value={username} onChangeText={setUsername} />
-            <Button
-              text="Continue"
-              onPress={() => handleLoginButton(username)}
-            />
+            <View>
+              <Text style={styles.title}>Welcome to</Text>
+              <Text style={styles.title2}>Abc Chat</Text>
+              <TextInput
+                value={username}
+                placeholder="Please write a username"
+                onChangeText={setUsername}
+              />
+            </View>
+            <View>
+              <Button
+                text="Continue"
+                onPress={() => handleLoginButton(username)}
+              />
+            </View>
           </View>
         </SafeAreaView>
       )}
@@ -35,6 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    justifyContent: 'space-around',
   },
   title: {
     fontSize: 40,
@@ -42,6 +51,7 @@ const styles = StyleSheet.create({
   title2: {
     fontSize: 40,
     color: '#F52958',
+    marginBottom: 40,
   },
 });
 

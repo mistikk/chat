@@ -1,44 +1,42 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import {
   StyleSheet,
   View,
   Dimensions,
-  TouchableOpacity,
   SafeAreaView,
   FlatList,
-  Text,
 } from 'react-native';
+import get from 'lodash/get';
 
 import ChatInput from '../../components/ChatInput';
 import ChatItem from '../../components/ChatItem';
 import Avatar from '../../components/Avatar';
+import Button from '../../components/Button';
 
 import ChatContainer from './ChatContainer';
 
 const ChatScreen = () => {
-  const _getChatItem = ({item}) => {
+  const _getChatItem = useCallback(({item}) => {
     return (
       <ChatItem
         message={item.text}
-        senderId={item.user.uid}
         messageId={item.key}
         connectWithTop={item.connectWithTop}
         isCurrentUser={item.isCurrentUser}
+        username={get(item, 'user.name')}
       />
     );
-  };
+  }, []);
 
   return (
     <ChatContainer>
-      {({messages, goBack}) => (
+      {({messages, goBack, sendMessage, user}) => (
         <View style={styles.container}>
           <View style={[styles.header, styles.shadow]}>
             <SafeAreaView style={styles.safeArea}>
-              <TouchableOpacity onPress={goBack}>
-                <Text>x</Text>
-              </TouchableOpacity>
+              <Button style={styles.button} text="Close" onPress={goBack} />
               <Avatar
-                username="mustafa"
+                username={user.name}
                 width={40}
                 height={40}
                 style={styles.avatar}
@@ -63,7 +61,7 @@ const ChatScreen = () => {
           />
           <ChatInput
             handleOnSendButtonPress={() => {}}
-            // sendMessage={_sendMessage}
+            sendMessage={sendMessage}
           />
         </View>
       )}
@@ -74,6 +72,8 @@ const ChatScreen = () => {
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   container: {
     flex: 1,
@@ -81,12 +81,13 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: '#fff',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '100%',
-    flexDirection: 'row',
     paddingHorizontal: 20,
     zIndex: 100,
+    paddingBottom: 10,
   },
   shadow: {
     shadowColor: '#000',
@@ -99,6 +100,13 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   avatar: {
+    alignSelf: 'center',
+  },
+  button: {
+    paddingVertical: 8,
+    paddingHorizontal: 20,
+    borderRadius: 25,
+    backgroundColor: '#F52958',
     alignSelf: 'center',
   },
 });
